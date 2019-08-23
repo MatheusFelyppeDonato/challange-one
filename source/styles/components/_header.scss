@@ -1,0 +1,117 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+
+
+    
+    &__left{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        @include desktop{
+            display: none;    
+        }
+
+        &__toggle{
+            background: none;
+            border: none;
+            height: 30px; 
+            width: 30px;
+
+            span{
+                margin-bottom: 4px;
+                display: block;
+                height: 3px; 
+                background: #4B3669;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+    }
+
+    &__middle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        
+        &__title{
+            display: flex;
+            text-transform: uppercase;
+            color: #C54924;
+
+
+            h1{
+                margin: 0;
+            }        }
+        
+        &__subtitle{
+            color: #705686;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 15px;
+
+            h3{
+                display: inline-flex;
+            }
+            &:before, &:after{
+                content: "";
+                display: inline-flex;
+                position: relative;
+                height: 2px;
+                width: 10px;
+                background: black;
+                margin: 0 5px;
+                
+            }
+        }
+        
+    }
+
+    &__right{
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        
+        &__bag{
+            display: flex;
+            background: none;
+            border: none;
+            flex-direction: column;  
+            color: #B9C5D5;
+            
+            &__total{
+                span{
+                    &:nth-child(1){
+                        color:#B9C5D5;
+                    }
+                    
+                    &:nth-child(2){
+                        color: red;
+                        
+                    }
+
+                    }
+            }
+            
+        
+            img{
+                width: 62px * 0.6;
+                height: 82px * 0.6;
+            }
+        }
+    }
+
+}
+
+
+
